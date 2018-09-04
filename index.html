@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chuyen doi feet -> meter</title>
+	<script type="text/javascript">
+		function convert(value,type_input){
+			let result = 0;
+			if(type_input=="feet"){
+				result =  0.305 * value;
+			}else if(type_input=="metter"){
+				result = 3.279 * value; 
+			}
+			return result;
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		let type = prompt("Nhập vào kiểu dữ liệu (metter/feet)");
+		let input = parseFloat(prompt(type));
+		let result = convert(input,type);
+		if(type=="feet"){
+			alert(type + " " + input + " = " + result + " metter")
+		}else if(type=="metter"){
+			alert(type + " " + input + " = " + result + " feet")
+		}
+	</script>
+</body>
+</html>
